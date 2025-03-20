@@ -4,13 +4,18 @@ from stats import (
     get_num_chars,
     sort_chars,
 )
+def read_book(book_path):
+    with open(book_path) as f:
+        book = f.read()
+    return book
 def main():
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
         return sys.exit(1)
     book_path = sys.argv[1]
-    num_words = get_num_words(book_path)
-    num_chars = get_num_chars(book_path)
+    book = read_book(book_path)
+    num_words = get_num_words(book)
+    num_chars = get_num_chars(book)
     sorted_chars = sort_chars(num_chars)
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_path}...")

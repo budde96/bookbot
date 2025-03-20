@@ -1,11 +1,7 @@
-def get_num_words(book_path):
-    with open(book_path) as f:
-        book = f.read()
+def get_num_words(book):
     return len(book.split())
-def get_num_chars(book_path):
+def get_num_chars(book):
     chars = {}
-    with open(book_path) as f:
-        book = f.read().lower()
     for text in book:
         if text in chars:
             chars[text] += 1
