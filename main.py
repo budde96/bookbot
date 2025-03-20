@@ -20,7 +20,7 @@ def main():
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")
-    print(f"Found {str(num_words)} total words")
+    print(f"Found {num_words} total words")
     print("--------- Character Count -------")
     for char in sorted_chars:
         if char["char"].isalpha():
